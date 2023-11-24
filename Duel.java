@@ -37,4 +37,6 @@ public class Duel {
         joueur1.setNombreDefaite(joueur1.getNombreDefaite()+1);
         
     }
+
+    
 }

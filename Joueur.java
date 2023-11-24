@@ -1,9 +1,14 @@
+import javax.swing.JPanel;
+
 public class Joueur {
     private String nom;
     private int nombreVictoire = 0 ;
     private int nombreDefaite = 0;
+    private JPanel panel;
+    
 
-    public Joueur(String nom){
+    public Joueur(String nom,JPanel panel){
+        this.panel=panel;
         this.nom=nom;
     }
 
@@ -21,5 +26,11 @@ public class Joueur {
     }
     public void setNombreVictoire(int nombreVictoire) {
         this.nombreVictoire = nombreVictoire;
+    }
+    public JPanel getPanel() {
+        return panel;
+    }
+    public void setPanel(JPanel panel) {
+        this.panel = panel;
     }
 }

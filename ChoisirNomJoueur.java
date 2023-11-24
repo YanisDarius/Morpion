@@ -22,10 +22,10 @@ public class ChoisirNomJoueur extends JPanel {
             @Override
             public void actionPerformed(ActionEvent e) {
                 if ((joueur1choisir.length()> 0) && (joueur2choisir.length()>0)){ 
-                Joueur joueur1 = new Joueur(joueur1choisir.getText());
+                Joueur joueur1 = new Joueur(joueur1choisir.getText(),new PanelX());
                 System.out.println("utilisateur 1   "+joueur1choisir.getText() );
 
-                Joueur joueur2 = new Joueur(joueur2choisir.getText());
+                Joueur joueur2 = new Joueur(joueur2choisir.getText(),new Panel0());
                 System.out.println("utilisateur 2   " + joueur2choisir.getText());
                 Duel duel = new Duel(joueur1, joueur2);
                 Morpion1vs1 morpion = new Morpion1vs1(ecran,duel);
