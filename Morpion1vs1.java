@@ -23,7 +23,7 @@ public class Morpion1vs1 extends JPanel {
         
         
 
-        GrilleAffichage grilleAffichage = new GrilleAffichage(duel);
+        GrilleAffichage grilleAffichage = new GrilleAffichage(duel,text,4,ecran);
         
 
 
