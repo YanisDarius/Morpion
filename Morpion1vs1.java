@@ -19,7 +19,7 @@ public class Morpion1vs1 extends JPanel {
 
         String texttitre = "Morpion :  " + joueur1.getNom() + " vs " + joueur2.getNom();
         Titre titre = new Titre(texttitre, 1);
-        Text text = new Text("", 2);
+        Text text = new Text("c'est au tour de  " + duel.getJoueuractuel().getNom() , 2);
         
         
 

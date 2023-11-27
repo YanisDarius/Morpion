@@ -14,7 +14,9 @@ public class GrilleAffichage extends JPanel {
     private GridBagConstraints grilleConstraints;
 
     public GrilleAffichage(Duel duel) {
+
         setLayout(new GridLayout(3, 3));
+        
         
 
         // Création d'une bordure avec une couleur spécifique
