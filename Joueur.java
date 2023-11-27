@@ -5,11 +5,13 @@ public class Joueur {
     private int nombreVictoire = 0 ;
     private int nombreDefaite = 0;
     private JPanel panel;
+    private int valeur;
     
 
     public Joueur(String nom,JPanel panel){
         this.panel=panel;
         this.nom=nom;
+        this.valeur = 0 ;
     }
 
     public int getNombreDefaite() {
@@ -33,4 +35,11 @@ public class Joueur {
     public void setPanel(JPanel panel) {
         this.panel = panel;
     }
+    public void setvaleur(int i) {
+        valeur=i;
+    }
+    public int getValeur() {
+        return valeur;
+    }
+    
 }

@@ -35,6 +35,7 @@ public class ChoisirNomJoueur extends JPanel {
                 
             }
         });
+        
         GridBagConstraints boutonConstraints = new GridBagConstraints();
         boutonConstraints.gridx = 0;
         boutonConstraints.gridy = 5;
