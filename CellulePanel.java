@@ -34,6 +34,7 @@ public class CellulePanel extends JPanel {
                 } else {
                     if (grille.gagner() != 0) {
                         // gagner joueur
+                        
                     }
                     duel.tourSuivant();
                     text.setText("c'est au tour de  " + duel.getJoueuractuel().getNom());
