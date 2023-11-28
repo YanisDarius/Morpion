@@ -11,6 +11,7 @@ public class CellulePanel extends JPanel {
     private Duel duel;
     private Text text;
     private Ecran ecran;
+    private boolean grilleremplie;
 
     public CellulePanel(int ligne, int colonne, Grille grille, Duel duel, Text text, Ecran ecran) {
         this.ligne = ligne;
@@ -20,21 +21,24 @@ public class CellulePanel extends JPanel {
         this.text = text;
         addMouseListener(new CelluleMouseListener());
         setPreferredSize(new Dimension(100, 100));
+        
     }
 
     private class CelluleMouseListener extends MouseAdapter {
         @Override
         public void mouseClicked(MouseEvent e) {
-            // Changer la couleur de la cellule en rouge (vous pouvez utiliser une autre
-            // couleur)
+           
             if (grille.getCase(ligne, colonne) == 0)
-                if (grille.setGrille(ligne, colonne, duel.getJoueuractuel().getValeur())) {
+                grilleremplie=grille.setGrille(ligne, colonne, duel.getJoueuractuel().getValeur());
+                System.out.println(grilleremplie);
+                if (grilleremplie == true) {
                     grille.reinitialisation();
                     ecran.ecranSuivant("fin");
                 } else {
-                    if (grille.gagner() != 0) {
-                        // gagner joueur
-                        
+                    if ((grille.gagner() != 0)) {
+                        Recapitulatif recapitulatif = new Recapitulatif(duel, ecran);
+                        ecran.ajouterEcran(recapitulatif, "recapitulatif");
+                        ecran.ecranSuivant("recapitulatif");
                     }
                     duel.tourSuivant();
                     text.setText("c'est au tour de  " + duel.getJoueuractuel().getNom());

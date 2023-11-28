@@ -32,7 +32,7 @@ public class Grille {
 
     private boolean grilleRemplie() {
         int compteur = 9;
-        boolean remplie ;
+        boolean remplie = false ;
         for (int i = 0; i < 3; i++) {
             for (int j = 0; j < 3; j++) {
                 if (grille[i][j] != 0) {
@@ -43,13 +43,13 @@ public class Grille {
         if (compteur == 0){
             return remplie=true;
         }else{
-            return remplie = false;
+            return remplie;
         }
     }
 
 
     public int gagner() {
-        
+        if(grille[0][0] != 0){
         for (int i = 0; i < 3; i++) {
             if (grille[i][0] == grille[i][1] && grille[i][1] == grille[i][2] && grille[i][0] != 0) {
                 return grille[i][0]; 
@@ -66,7 +66,7 @@ public class Grille {
         if (grille[0][2] == grille[1][1] && grille[1][1] == grille[2][0] && grille[0][2] != 0) {
             return grille[0][2]; 
         }
-
+    }
         return 0; 
     }
 

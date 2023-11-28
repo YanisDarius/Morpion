@@ -24,7 +24,7 @@ public class Fin extends JPanel {
         setLayout(new GridBagLayout());
 
         // Ajoutez une étiquette de remerciement
-        JLabel remerciementsLabel = new JLabel("Merci d'avoir participé  !");
+        JLabel remerciementsLabel = new JLabel("Merci d'avoir jouer à Morpion  !");
         remerciementsLabel.setFont(new Font("Arial", Font.PLAIN, 18));
 
         GridBagConstraints labelConstraints = new GridBagConstraints();
