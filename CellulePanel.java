@@ -19,25 +19,26 @@ public class CellulePanel extends JPanel {
         this.grille = grille;
         this.duel = duel;
         this.text = text;
+        this.ecran = ecran;
         addMouseListener(new CelluleMouseListener());
         setPreferredSize(new Dimension(100, 100));
-        
+
     }
 
     private class CelluleMouseListener extends MouseAdapter {
         @Override
         public void mouseClicked(MouseEvent e) {
-           
-            if (grille.getCase(ligne, colonne) == 0)
-                grilleremplie=grille.setGrille(ligne, colonne, duel.getJoueuractuel().getValeur());
+
+            if (grille.getCase(ligne, colonne) == 0) {
+                grilleremplie = grille.setGrille(ligne, colonne, duel.getJoueuractuel().getValeur());
                 System.out.println(grilleremplie);
-                if (grilleremplie == true) {
+                if (grilleremplie) {
                     grille.reinitialisation();
                     ecran.ecranSuivant("fin");
                 } else {
                     if ((grille.gagner() != 0)) {
                         Recapitulatif recapitulatif = new Recapitulatif(duel, ecran);
-                        ecran.ajouterEcran(recapitulatif, "recapitulatif");
+                        ecran.ajouterEcran(recapitulatif,"recapitulatif");
                         ecran.ecranSuivant("recapitulatif");
                     }
                     duel.tourSuivant();
@@ -48,11 +49,12 @@ public class CellulePanel extends JPanel {
                         setBackground(Color.BLUE);
                     }
                 }
-            // Afficher les données dans la console
-            System.out.println("Clic sur la cellule : (" + ligne + ", " + colonne + ")");
+
+                System.out.println("Clic sur la cellule : (" + ligne + ", " + colonne + ")");
+
+            }
 
         }
 
     }
-
 }

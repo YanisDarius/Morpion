@@ -1,5 +1,6 @@
 
 import java.awt.GridBagConstraints;
+import java.awt.GridBagLayout;
 import java.awt.Insets;
 import javax.swing.JButton;
 import javax.swing.JPanel;
@@ -8,6 +9,8 @@ import java.awt.event.ActionListener;
 
 public class Recapitulatif extends JPanel{
     public Recapitulatif(Duel duel,Ecran ecran){
+
+        setLayout(new GridBagLayout());
         Titre titre = new Titre("Récapitulatif des points", -1);
         Text joueur1 =  new Text(duel.getJoueur1().getNom()+" a "+duel.getJoueur1().getNombreVictoire()  + " victoire ", 2);
         Text joueur2 =  new Text(duel.getJoueur2().getNom()+ " a " +duel.getJoueur2().getNombreVictoire() + "victoire", 3);
