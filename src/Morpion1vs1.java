@@ -1,3 +1,4 @@
+
 import java.awt.BorderLayout;
 import java.awt.GridBagLayout;
 import javax.swing.JPanel;
@@ -17,9 +18,10 @@ public class Morpion1vs1 extends JPanel {
         JPanel jpanel1 = new JPanel();
         jpanel1.setLayout(new GridBagLayout());
 
-        String texttitre = "Morpion :  " + joueur1.getNom() + " vs " + joueur2.getNom();
+        String texttitre = "Morpion : " + joueur1.getNom() + " vs " + joueur2.getNom();
         Titre titre = new Titre(texttitre, 1);
-        Text text = new Text("c'est au tour de  " + duel.getJoueuractuel().getNom() , 2);
+        Text text = new Text("C'est au tour de " + duel.getJoueuractuel().getNom() , 2);
+        text.setPolice(24);
         
         
 

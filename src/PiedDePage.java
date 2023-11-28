@@ -1,3 +1,4 @@
+
 import java.awt.BorderLayout;
 import java.awt.FlowLayout;
 import java.awt.event.ActionEvent;
@@ -28,8 +29,8 @@ public class PiedDePage extends JPanel {
             }
         });
 
-        JButton retour = new JButton("retour choisir nom");
-        quitter.addActionListener(new ActionListener() {
+        JButton changerLesJoueur = new JButton("Retour");
+        changerLesJoueur.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 
@@ -40,7 +41,7 @@ public class PiedDePage extends JPanel {
 
         flowPanel.add(quitter);
 
-        flowPane2.add(retour);
+        flowPane2.add(changerLesJoueur);
        
         add(flowPanel, BorderLayout.EAST);
         add(flowPane2, BorderLayout.WEST);

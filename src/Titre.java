@@ -1,3 +1,4 @@
+
 import java.awt.Font;
 import java.awt.GridBagConstraints;
 import java.awt.Insets;
@@ -17,7 +18,7 @@ public class Titre extends JLabel {
         
         super(titreText);
         this.placement=placement;
-        setFont(new Font("Arial", Font.BOLD, 32));
+        setFont(new Font("Arial", Font.BOLD, police));
         titreConstraints = new GridBagConstraints();
         titreConstraints.gridx = 0;
         titreConstraints.gridy = placement;
@@ -25,7 +26,10 @@ public class Titre extends JLabel {
         titreConstraints.insets = new Insets(10, 10, 20, 10);
     }
 
-   
+   public void setPolice(int police /*valeur par defaut 32 */) {
+       this.police = police;
+       this.setFont(new Font("Arial", Font.BOLD, police));
+   }
     public GridBagConstraints getContraint() {
         return titreConstraints;
     }

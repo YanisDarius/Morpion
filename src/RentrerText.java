@@ -1,6 +1,6 @@
+
 import java.awt.GridBagConstraints;
 import java.awt.Insets;
-import javax.swing.JButton;
 import javax.swing.JTextField;
 
 public class RentrerText extends JTextField{
