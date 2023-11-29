@@ -1,19 +1,23 @@
-
-
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
 import java.awt.Insets;
 import javax.swing.JButton;
 import javax.swing.JPanel;
-
-
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 
+/**
+ * Represents a panel for choosing player names in the Tic-Tac-Toe (Morpion) game.
+ */
 public class ChoisirNomJoueur extends JPanel {
 
+    /**
+     * Initializes a new instance of the ChoisirNomJoueur class.
+     *
+     * @param ecran The Ecran instance for managing screens.
+     */
     public ChoisirNomJoueur(Ecran ecran) {
         setLayout(new GridBagLayout());
         Titre titre = new Titre("Morpion 1 vs 1", 0);
@@ -42,7 +46,6 @@ public class ChoisirNomJoueur extends JPanel {
             }
         });
 
-        
         addKeyListener(new KeyListener() {
             @Override
             public void keyTyped(KeyEvent e) {
@@ -58,11 +61,10 @@ public class ChoisirNomJoueur extends JPanel {
 
             @Override
             public void keyReleased(KeyEvent e) {
-                
+
             }
         });
 
-        
         setFocusable(true);
 
         GridBagConstraints boutonConstraints = new GridBagConstraints();
@@ -77,7 +79,5 @@ public class ChoisirNomJoueur extends JPanel {
         add(textjoueuer2, textjoueuer2.getContraints());
         add(joueur2choisir, joueur2choisir.getConstraints());
         add(bouton, boutonConstraints);
-
     }
-
 }

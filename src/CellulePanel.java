@@ -1,4 +1,3 @@
-
 import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.Font;
@@ -10,6 +9,9 @@ import java.awt.event.MouseEvent;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 
+/**
+ * Represents a panel for individual cells in the Tic-Tac-Toe (Morpion) game grid.
+ */
 public class CellulePanel extends JPanel {
     private int ligne;
     private int colonne;
@@ -21,6 +23,17 @@ public class CellulePanel extends JPanel {
     private Recapitulatif recapitulatif;
     private GrilleAffichage affichage;
 
+    /**
+     * Initializes a new instance of the CellulePanel class.
+     *
+     * @param ligne      The row index of the cell.
+     * @param colonne    The column index of the cell.
+     * @param grille     The Grille instance representing the game grid.
+     * @param duel       The Duel instance representing the game.
+     * @param text       The Text instance for displaying messages.
+     * @param ecran      The Ecran instance for managing screens.
+     * @param affichage  The GrilleAffichage instance representing the graphical display of the grid.
+     */
     public CellulePanel(int ligne, int colonne, Grille grille, Duel duel, Text text, Ecran ecran,
             GrilleAffichage affichage) {
         this.ligne = ligne;
@@ -31,9 +44,8 @@ public class CellulePanel extends JPanel {
         this.ecran = ecran;
         this.affichage = affichage;
         addMouseListener(new CelluleMouseListener());
-        setPreferredSize(new Dimension(150, 150));new Dimension(50, 50);
-        setMinimumSize(new Dimension(50, 50)); 
-
+        setPreferredSize(new Dimension(150, 150)); // Adjust dimensions as needed
+        setMinimumSize(new Dimension(50, 50)); // Adjust dimensions as needed
     }
 
     private class CelluleMouseListener extends MouseAdapter {
