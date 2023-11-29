@@ -1,4 +1,4 @@
-package Ecriture;
+
 
 import java.awt.Font;
 import java.awt.GridBagConstraints;

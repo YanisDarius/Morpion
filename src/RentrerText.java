@@ -1,4 +1,4 @@
-package Ecriture;
+
 
 import java.awt.GridBagConstraints;
 import java.awt.Insets;

@@ -1,4 +1,4 @@
-package Morpion;
+
 
 import java.awt.Color;
 import java.awt.Dimension;
@@ -9,22 +9,21 @@ import javax.swing.BorderFactory;
 import javax.swing.JPanel;
 import javax.swing.border.Border;
 
-import Donnee.Duel;
-import Ecriture.Text;
-import Fenetre.Ecran;
 
 public class GrilleAffichage extends JPanel {
 
     private GridBagConstraints grilleConstraints;
     private int placement;
-    private CellulePanel[][] cellules; // Keep track of CellulePanel instances
+    private CellulePanel[][] cellules;
+    private Ecran ecran; // Keep track of CellulePanel instances
 
     public GrilleAffichage(Duel duel, Text text, int placement, Ecran ecran) {
         setLayout(new GridLayout(3, 3));
         setPreferredSize(new Dimension(600, 600));
-        setMaximumSize(new Dimension(200,200));
+        setMinimumSize(new Dimension(200,200));
         this.placement = placement;
         this.cellules = new CellulePanel[3][3];
+        this.ecran=ecran;
 
         // Création d'une bordure avec une couleur spécifique
         Border cellBorder = BorderFactory.createLineBorder(Color.BLACK, 2);
@@ -63,5 +62,6 @@ public class GrilleAffichage extends JPanel {
                 cellules[i][j].repaint();   
             }
         }
+        ecran.rafraichirEcran();
     }
 }

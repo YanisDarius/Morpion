@@ -1,4 +1,3 @@
-package Morpion;
 
 import java.awt.Color;
 import java.awt.Dimension;
@@ -10,11 +9,6 @@ import java.awt.event.MouseEvent;
 
 import javax.swing.JLabel;
 import javax.swing.JPanel;
-
-import Donnee.Duel;
-import Ecran.Recapitulatif;
-import Ecriture.Text;
-import Fenetre.Ecran;
 
 public class CellulePanel extends JPanel {
     private int ligne;
@@ -37,8 +31,8 @@ public class CellulePanel extends JPanel {
         this.ecran = ecran;
         this.affichage = affichage;
         addMouseListener(new CelluleMouseListener());
-        setPreferredSize(new Dimension(150, 150));
-        setMaximumSize(new Dimension(50,50));
+        setPreferredSize(new Dimension(150, 150));new Dimension(50, 50);
+        setMinimumSize(new Dimension(50, 50)); 
 
     }
 
@@ -50,23 +44,23 @@ public class CellulePanel extends JPanel {
                 grilleremplie = grille.setGrille(ligne, colonne, duel.getJoueuractuel().getValeur());
                 System.out.println(grilleremplie);
                 if (grilleremplie) {
-                    
+
                     creationDeRecapitulatif();
                 } else {
-                    
+
                     duel.tourSuivant();
                     text.setText("c'est au tour de  " + duel.getJoueuractuel().getNom());
-                    
+
                     if (duel.getJoueuractuel().getValeur() == 1) {
                         JLabel X = new JLabel("X");
-                        X.setFont(new Font("Arial", Font.PLAIN, 40));
+                        X.setFont(new Font("Arial", Font.PLAIN, 50));
                         X.setForeground(Color.BLUE);
                         setLayout(new GridBagLayout());
                         add(X, new GridBagConstraints());
 
                     } else {
                         JLabel O = new JLabel("O");
-                        O.setFont(new Font("Arial", Font.PLAIN, 40));
+                        O.setFont(new Font("Arial", Font.PLAIN, 50));
                         O.setForeground(Color.RED);
                         setLayout(new GridBagLayout());
                         add(O, new GridBagConstraints());
@@ -88,7 +82,7 @@ public class CellulePanel extends JPanel {
             } else {
                 duel.victoireJoueur2();
             }
-            
+
             creationDeRecapitulatif();
         }
     }
@@ -98,8 +92,7 @@ public class CellulePanel extends JPanel {
         duel.tourSuivant();
         grille.reinitialisation();
         affichage.resetCellules();
-      
-        recapitulatif = new Recapitulatif(duel, ecran,affichage);
+        recapitulatif = new Recapitulatif(duel, ecran, affichage);
         ecran.ajouterEcran(recapitulatif, "recapitulatif");
         ecran.ecranSuivant("recapitulatif");
     }

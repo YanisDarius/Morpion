@@ -1,4 +1,3 @@
-package Ecran;
 
 import java.awt.Font;
 import java.awt.GridBagConstraints;
@@ -10,7 +9,6 @@ import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 
-import Fenetre.Ecran;
 
 /**
  * La classe Fin représente un panneau Swing affichant un message de remerciement

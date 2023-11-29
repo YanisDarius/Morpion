@@ -1,4 +1,4 @@
-package Ecran;
+
 
 
 import java.awt.GridBagConstraints;
@@ -7,18 +7,14 @@ import java.awt.Insets;
 import javax.swing.JButton;
 import javax.swing.JPanel;
 
-import Donnee.Duel;
-import Ecriture.Text;
-import Ecriture.Titre;
-import Fenetre.Ecran;
-import Morpion.GrilleAffichage;
+
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class Recapitulatif extends JPanel{
     public Recapitulatif(Duel duel,Ecran ecran,GrilleAffichage affiche){
-        affiche.resetCellules();
+        
         setLayout(new GridBagLayout());
         Titre titre = new Titre("Récapitulatif des points", 0);
         Text nombreduel = new Text("duel n°"+duel.getNombreduel(), 1);

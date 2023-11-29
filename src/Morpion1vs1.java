@@ -1,15 +1,9 @@
-package Morpion;
 
 import java.awt.BorderLayout;
 import java.awt.GridBagLayout;
 import javax.swing.JPanel;
 
-import Donnee.Duel;
-import Donnee.Joueur;
-import Ecran.PiedDePage;
-import Ecriture.Text;
-import Ecriture.Titre;
-import Fenetre.Ecran;
+
 
 public class Morpion1vs1 extends JPanel {
 
