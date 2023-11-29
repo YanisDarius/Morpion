@@ -62,6 +62,6 @@ public class GrilleAffichage extends JPanel {
                 cellules[i][j].repaint();   
             }
         }
-        ecran.rafraichirEcran();
+        
     }
 }

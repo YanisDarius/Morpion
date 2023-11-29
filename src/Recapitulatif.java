@@ -42,6 +42,7 @@ public class Recapitulatif extends JPanel{
             public void actionPerformed(ActionEvent e) {
                 
                 ecran.ecranSuivant("morpion1vs1");
+                
             }
         });
         

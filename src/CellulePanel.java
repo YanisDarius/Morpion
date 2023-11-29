@@ -66,6 +66,7 @@ public class CellulePanel extends JPanel {
                         add(O, new GridBagConstraints());
                     }
                     victoire();
+                    ecran.rafraichirEcran();
                 }
 
                 System.out.println("Clic sur la cellule : (" + ligne + ", " + colonne + ")");

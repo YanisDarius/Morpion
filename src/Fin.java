@@ -21,7 +21,7 @@ public class Fin extends JPanel {
      *
      * @param ecran L'instance de la classe Ecran utilisée pour la gestion des écrans.
      */
-    public Fin(Ecran ecran) {
+    public  Fin(Ecran ecran) {
         
         setLayout(new GridBagLayout());
 
@@ -44,12 +44,12 @@ public class Fin extends JPanel {
             }
         });
 
-        JButton rejouer = new JButton("rejouer");
-        quitter.addActionListener(new ActionListener() {
+        JButton menu = new JButton("Menu");
+        menu.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 
-                ecran.ecranSuivant("morpion1vs1");
+                ecran.ecranSuivant("choisirnom");
             }
         });
 
@@ -65,7 +65,7 @@ public class Fin extends JPanel {
 
         // Ajoutez les composants au panneau
         add(remerciementsLabel, labelConstraints);
-        add(rejouer,button2Constraints);
+        add(menu,button2Constraints);
         add(quitter, buttonConstraints);
 
     }
