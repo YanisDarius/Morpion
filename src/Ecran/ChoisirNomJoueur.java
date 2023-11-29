@@ -1,9 +1,19 @@
+package Ecran;
 
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
 import java.awt.Insets;
 import javax.swing.JButton;
 import javax.swing.JPanel;
+
+import Donnee.Duel;
+import Donnee.Joueur;
+import Ecriture.RentrerText;
+import Ecriture.Text;
+import Ecriture.Titre;
+import Fenetre.Ecran;
+import Morpion.Morpion1vs1;
+
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.KeyEvent;

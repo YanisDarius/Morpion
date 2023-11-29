@@ -1,3 +1,4 @@
+package Ecran;
 
 import java.awt.BorderLayout;
 import java.awt.FlowLayout;
@@ -6,6 +7,8 @@ import java.awt.event.ActionListener;
 
 import javax.swing.JButton;
 import javax.swing.JPanel;
+
+import Fenetre.Ecran;
 
 
 public class PiedDePage extends JPanel {

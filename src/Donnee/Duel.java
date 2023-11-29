@@ -1,3 +1,4 @@
+package Donnee;
 
 public class Duel {
     private Joueur joueur1;

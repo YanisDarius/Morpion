@@ -1,3 +1,4 @@
+package Morpion;
 
 import java.awt.Color;
 import java.awt.Dimension;
@@ -7,6 +8,10 @@ import java.awt.Insets;
 import javax.swing.BorderFactory;
 import javax.swing.JPanel;
 import javax.swing.border.Border;
+
+import Donnee.Duel;
+import Ecriture.Text;
+import Fenetre.Ecran;
 
 public class GrilleAffichage extends JPanel {
 

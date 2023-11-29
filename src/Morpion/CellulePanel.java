@@ -1,3 +1,4 @@
+package Morpion;
 
 import java.awt.Color;
 import java.awt.Dimension;
@@ -9,6 +10,11 @@ import java.awt.event.MouseEvent;
 
 import javax.swing.JLabel;
 import javax.swing.JPanel;
+
+import Donnee.Duel;
+import Ecran.Recapitulatif;
+import Ecriture.Text;
+import Fenetre.Ecran;
 
 public class CellulePanel extends JPanel {
     private int ligne;

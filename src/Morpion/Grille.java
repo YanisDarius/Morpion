@@ -1,4 +1,5 @@
-package src;
+package Morpion;
+
 
 
 public class Grille {
