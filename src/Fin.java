@@ -24,34 +24,14 @@ public class Fin extends JPanel {
     public  Fin(Ecran ecran) {
         
         setLayout(new GridBagLayout());
-
-        // Ajoutez une étiquette de remerciement
-        JLabel remerciementsLabel = new JLabel("Merci d'avoir jouer au Morpion  !");
-        remerciementsLabel.setFont(new Font("Arial", Font.PLAIN, 18));
-
-        GridBagConstraints labelConstraints = new GridBagConstraints();
-        labelConstraints.gridx = 0;
-        labelConstraints.gridy = 0;
-        labelConstraints.insets = new java.awt.Insets(10, 10, 10, 10);
+        Titre remerciment = new Titre("Merci d'avoir jouer au Morpion  !", 0);
+        Button quitter = new Button("quitter",ecran,"TERMINER",1);
+        Button menu = new Button("Menu",ecran,"choisirnom", 2);
 
         // Ajoutez un bouton "Quitter" avec un gestionnaire d'événements
-        JButton quitter = new JButton("Quitter");
-        quitter.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                
-                ecran.ecranSuivant("TERMINER");
-            }
-        });
+        
 
-        JButton menu = new JButton("Menu");
-        menu.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                
-                ecran.ecranSuivant("choisirnom");
-            }
-        });
+        
 
         GridBagConstraints buttonConstraints = new GridBagConstraints();
         buttonConstraints.gridx = 0;
@@ -64,9 +44,9 @@ public class Fin extends JPanel {
         button2Constraints.insets = new java.awt.Insets(10, 10, 10, 10);
 
         // Ajoutez les composants au panneau
-        add(remerciementsLabel, labelConstraints);
-        add(menu,button2Constraints);
-        add(quitter, buttonConstraints);
+        add(remerciment, remerciment.getContraint());
+        add(menu,menu.getConstraint());
+        add(quitter, quitter.getConstraint());
 
     }
 }
