@@ -1,12 +1,4 @@
-
-import java.awt.Font;
-import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-
-import javax.swing.JButton;
-import javax.swing.JLabel;
 import javax.swing.JPanel;
 
 
@@ -26,23 +18,9 @@ public class Fin extends JPanel {
         setLayout(new GridBagLayout());
         Titre remerciment = new Titre("Merci d'avoir jouer au Morpion  !", 0);
         Button quitter = new Button("quitter",ecran,"TERMINER",1);
-        Button menu = new Button("Menu",ecran,"choisirnom", 2);
-
-        // Ajoutez un bouton "Quitter" avec un gestionnaire d'événements
-        
+        Button menu = new Button("Menu",ecran,"menu", 2);
 
         
-
-        GridBagConstraints buttonConstraints = new GridBagConstraints();
-        buttonConstraints.gridx = 0;
-        buttonConstraints.gridy = 1;
-        buttonConstraints.insets = new java.awt.Insets(10, 10, 10, 10);
-
-        GridBagConstraints button2Constraints = new GridBagConstraints();
-        button2Constraints.gridx = 0;
-        button2Constraints.gridy = 2;
-        button2Constraints.insets = new java.awt.Insets(10, 10, 10, 10);
-
         // Ajoutez les composants au panneau
         add(remerciment, remerciment.getContraint());
         add(menu,menu.getConstraint());

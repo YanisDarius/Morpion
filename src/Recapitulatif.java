@@ -1,16 +1,7 @@
-
-
-
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
 import java.awt.Insets;
-import javax.swing.JButton;
 import javax.swing.JPanel;
-
-
-
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 
 public class Recapitulatif extends JPanel{
     public Recapitulatif(Duel duel,Ecran ecran,GrilleAffichage affiche){
@@ -22,39 +13,11 @@ public class Recapitulatif extends JPanel{
         String textjoueu2 = ajoutS(duel.getJoueur2().getNom()+" a "+duel.getJoueur2().getNombreVictoire()  + " victoire",duel.getJoueur2().getNombreVictoire());
         Text joueur1 =  new Text(textjoueu1, 2);
         Text joueur2 =  new Text(textjoueu2, 3);
-        
+        Button fin = new Button("Fin", ecran,"fin", 4);
+        Button rejouer = new Button("Rejouer", ecran,"morpion1vs1", 4);
+        Button changerLesJoueur = new Button("Menu", ecran, "menu", 4);
 
-        JButton fin = new JButton("Fin");
-        fin.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                
-                ecran.ecranSuivant("fin");
-            }
-        });
-        
-
-        
-
-        JButton rejouer = new JButton("Rejouer");
-        rejouer.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                
-                ecran.ecranSuivant("morpion1vs1");
-                
-            }
-        });
-        
-        
-        JButton changerLesJoueur = new JButton("Changer les joueur");
-        changerLesJoueur.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                
-                ecran.ecranSuivant("choisirnom");
-            }
-        });
+      
 
         GridBagConstraints boutonConstraints = new GridBagConstraints();
         boutonConstraints.gridx = 0;
