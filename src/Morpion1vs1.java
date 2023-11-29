@@ -10,9 +10,9 @@ public class Morpion1vs1 extends JPanel {
     private Duel duel;
     private Joueur joueur1;
     private Joueur joueur2;
-    private GrilleAffichage grilleAffichage;
+   
 
-    public Morpion1vs1(Ecran ecran, Duel duel,int choix) {
+    public Morpion1vs1(Ecran ecran, Duel duel) {
         setLayout(new BorderLayout());
 
         this.duel = duel;
@@ -27,11 +27,9 @@ public class Morpion1vs1 extends JPanel {
         text.setPolice(24);
         
         
-        if (choix == 1) {
-          grilleAffichage = new GrilleAffichage(duel,text,4,ecran);
-        }else{
-            grilleAffichage = new GrilleAffichage(duel,text,4,ecran);
-        }
+       
+        GrilleAffichage grilleAffichage = new GrilleAffichage(duel,text,4,ecran);
+        
         
         
 
