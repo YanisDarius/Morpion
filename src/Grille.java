@@ -82,7 +82,7 @@ public class Grille {
      * @return The winning player's value (1 or 2) if there is a winner, 0 otherwise.
      */
     public int gagner() {
-        if (grille[0][0] != 0) {
+        
             for (int i = 0; i < 3; i++) {
                 if (grille[i][0] == grille[i][1] && grille[i][1] == grille[i][2] && grille[i][0] != 0) {
                     return grille[i][0];
@@ -98,7 +98,7 @@ public class Grille {
             if (grille[0][2] == grille[1][1] && grille[1][1] == grille[2][0] && grille[0][2] != 0) {
                 return grille[0][2];
             }
-        }
+        
         return 0;
     }
 }
